@@ -97,6 +97,8 @@ func New(s Options) *ConformanceTestSuite {
 	if s.IsWasmPluginTest {
 		if s.WasmPluginType == "CPP" {
 			s.SupportedFeatures.Insert(string(WASMCPPConformanceFeature))
+		} else if s.WasmPluginType == "RUST" {
+			s.SupportedFeatures.Insert(string(WASMRustConformanceFeature))
 		} else {
 			s.SupportedFeatures.Insert(string(WASMGoConformanceFeature))
 		}
