@@ -23,8 +23,9 @@ const (
 	HTTPConformanceFeature SupportedFeature = "http"
 
 	// extended: extensibility
-	WASMGoConformanceFeature  SupportedFeature = "wasm-go"
-	WASMCPPConformanceFeature SupportedFeature = "wasm-cpp"
+	WASMGoConformanceFeature   SupportedFeature = "wasm-go"
+	WASMCPPConformanceFeature  SupportedFeature = "wasm-cpp"
+	WASMRustConformanceFeature SupportedFeature = "wasm-rust"
 
 	// extended: service discovery
 	DubboConformanceFeature  SupportedFeature = "dubbo"
@@ -46,4 +47,5 @@ var AllFeatures = sets.Set{}.
 
 var ExperimentFeatures = sets.Set{}.
 	Insert(string(WASMGoConformanceFeature)).
-	Insert(string(WASMCPPConformanceFeature))
+	Insert(string(WASMCPPConformanceFeature)).
+	Insert(string(WASMRustConformanceFeature))
