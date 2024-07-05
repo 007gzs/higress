@@ -65,7 +65,7 @@ where
     }
     Ok(ret)
 }
-fn blocked_code_default() -> u16{
+fn blocked_code_default() -> u32{
     403
 }
 fn case_sensitive_default() -> bool{
@@ -75,7 +75,7 @@ fn case_sensitive_default() -> bool{
 #[serde(default)]
 pub struct RquestBlockConfig {
     #[serde(default = "blocked_code_default")]
-	blocked_code: u16,
+	blocked_code: u32,
 	blocked_message: String,
     #[serde(default = "case_sensitive_default")]
 	case_sensitive: bool,
