@@ -61,6 +61,7 @@ metadata:
   namespace: higress-system
 spec:
   defaultConfig:
+    blocked_code: 403
     block_urls:
     - "swagger.html"
     block_regexp_urls:
