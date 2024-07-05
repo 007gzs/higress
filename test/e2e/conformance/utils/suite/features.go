@@ -37,6 +37,13 @@ const (
 	EnvoyConfigConformanceFeature SupportedFeature = "envoy-config"
 )
 
+var WasmPluginTypeMap = map[string]SupportedFeature{
+	"":     WASMGoConformanceFeature, // default
+	"GO":   WASMGoConformanceFeature,
+	"CPP":  WASMCPPConformanceFeature,
+	"RUST": WASMRustConformanceFeature,
+}
+
 var AllFeatures = sets.Set{}.
 	Insert(string(HTTPConformanceFeature)).
 	Insert(string(DubboConformanceFeature)).

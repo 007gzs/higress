@@ -27,7 +27,7 @@ func init() {
 
 var RustWasmPluginsRequestBlock = suite.ConformanceTest{
 	ShortName:   "RustWasmPluginsRequestBlock",
-	Description: "The Ingress in the higress-conformance-infra namespace test the request-block wasmplugins.",
+	Description: "The Ingress in the higress-conformance-infra namespace test the rust request-block wasmplugins.",
 	Manifests:   []string{"tests/rust-wasm-request-block.yaml"},
 	Features:    []suite.SupportedFeature{suite.WASMRustConformanceFeature},
 	Test: func(t *testing.T, suite *suite.ConformanceTestSuite) {
